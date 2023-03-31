@@ -1,0 +1,27 @@
+services:
+  app:
+    image: hackerpoints-api
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - hackerpoints-db
+    environment:
+      - JWT_SECRET=jwtSecret
+      - JWT_EXPIRATION=1h
+      - JWT_REFRESH_EXPIRATION=1d
+      - JWT_RESET_PASSWORD_EXPIRATION=10m
+      - JWT_VERIFY_EMAIL_EXPIRATION=10m
+      - OAUTH_SECRET=oauthSecret
+      - OAUTH_CLIENT_ID=hackerpoints
+  db:
+    image: mongo:6-jammy
+    container_name: hackerpoints-db
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+      - MONGO_INITDB_DATABASE=hackerpoints

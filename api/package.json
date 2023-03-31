@@ -1,0 +1,19 @@
+{
+  "name": "hackerpoints-api",
+  "version": "0.0.1",
+  "description": "hackerpoints api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo 'no test configured'",
+    "start": "node index.js"
+  },
+  "author": "Jason Ross <algorythm@gmail.com>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "koa": "^2.14.1",
+    "koa-bodyparser": "^4.4.0",
+    "koa-router": "^12.0.0",
+    "mongoose": "^7.0.3"
+  }
+}
