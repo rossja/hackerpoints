@@ -4,6 +4,5 @@ a simple app to track hacker points you and your friends assign to
 each other
 
 
---
-
+-- <br />
 *dedicated to [pee](https://github.com/pee)*
