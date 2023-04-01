@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 
 import React, { useState, useEffect } from 'react';
@@ -45,6 +45,9 @@ function App() {
 
   return (
     <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
       <UserForm onUserCreated={handleUserCreated} />
       <h1>Users</h1>
       <ul>
